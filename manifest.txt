@@ -1,0 +1,2 @@
+Main-Class: com.codezide.ui.MainFrame
+Class-Path: lib/gson-2.8.9.jar
