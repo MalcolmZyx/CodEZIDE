@@ -1,0 +1,608 @@
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+Discord messages, used as our semester long notes
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////////////////////////////
+Project Planning & Task Allocation notes: 
+////////////////////////////////////////////////////////////////////
+
+Project Planning:
+////////////////////////////////////////////////////////////////////
+(12 Weeks Total)
+IDE Text Editor
+ Phase 1
+Saving (3 Days) ✅
+Creating (3 Days) ✅
+Phase 2
+Terminal Support & Output (2 Weeks) ✅
+Phase 3
+Autocomplete/Suggestions? General Language Support? (3-4 Weeks) 🔨
+Phase 4
+Error Detection (2 Weeks)
+Phase 5
+Good Looking UIX (1 Week)
+Compiler Compiler (Give it the compiler binaries and automatically set it up for the user)
+Phase 1
+What compilers will we support, Java (2 Weeks) ✅
+What OS's will we support (Windows) ✅
+Phase 2
+Java for Apple Support ✅
+Phase 3
+Auto Install compiler
+Phase 5
+C++ support (2 weeks) ✅
+Phase 4
+Python support (2 weeks)
+
+
+Task Assignments: 
+////////////////////////////////////////////////////////////////////
+Phase 1
+Saving (3 Days) @BirdTheThird 
+Create a directory (filespace) for the app to access/save our users files
+We want them to be able to pick where this directory exists
+Translate the text content of our UI to a file
+Creating (3 Days) @Scyan  @ARBY 
+Allow the user to type like a text editor in our application
+We need a File >  Edit > View taskbar on the top
+Two sidebars one that can view all files in the directory and one to hold our run buttons
+Phase 1
+What compilers will we support, Java (2 Weeks) @Malcolm 
+Link a button to run a selected file
+What OS's will we support (Windows & Mac) 
+Owen will have to take care of testing mac support Mac: @BirdTheThird Windows: @Scyan
+
+Next week
+Phase 2
+Terminal Support & Output (2 Weeks)
+Terminal Input @Scyan
+Output @Malcolm
+Integrating Malcolms terminal with new UI @ARBY
+Phase 2
+Java for Apple Support @BirdTheThird
+New File & Save File @BirdTheThird
+
+Phase 3
+Autocomplete/Suggestions? General Language Support? (3-4 Weeks)
+
+@ARBY UI Beautifulness
+@Malcolm C++ Support
+@BirdTheThird integrating save and other functionality 
+@Scyan integrating input & starting work on java parsing and text highlighting
+
+
+
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+Teammates' commit lists (serves as notes displayed to rest of team): 
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////
+Malcolm's Commit List: 
+////////////////////////////////////////////////////////////////////
+
+2/15/24-Malcolm
+
+📔 To-Do
+Phase 1 task assignment:
+- What compilers will we support, Java
+- Link a button to run a selected file
+🔨 In-Progress
+- storing our own paths to the compiler (can't make a system path variable due to the administrative privileges  required.)
+✅ Done
+- Was able to set up a folder and copy in any file (given the path) into that folder and then run it and visualize it in a JTextArea on a JPanel UI prototype.
+🧊  Frozen 
+
+
+2/17/24-Malcolm 
+
+📔 To-Do
+Phase 1 task assignment:
+- Incorporate my prototype in the main branch if approved by Software Director
+🔨 In-Progress
+✅ Done
+- Linked a button to run a selected file in a prototype
+- Able to compile and run java files as long as the path to that file is provided (as well as the name of that file), and the java compiler must be installed. Path, to the compiler/binaries, doesn't need to be provided though, was able to automatically fetch it.
+🧊  Frozen 
+
+
+Date unknown - Malcolm
+
+📔 To-Do
+🔨 In-Progress
+✅ Done
+Phase 1 & 2 task assignments completed:
+- Linked a button to run a selected file in the main branch. (File selection process not on my end, so I don't know if that's working yet.)
+- Terminal output working alongside the run button in the main branch.
+🧊  Frozen
+
+
+03/03/2025 - Malcolm
+
+📔 To-Do
+Phase 3 Task Assignment: 
+- C++ support
+🔨 In-Progress
+Being able to compile and run a C++ file. (will try to reuse the code I already have)
+✅ Done
+Downloaded the C++ binaries to my computer and briefly researched next steps in supporting C++
+🧊  Frozen
+
+
+
+03/05/2025 - Malcolm
+
+📔 To-Do
+- Need to go back and make code less messy and more usable. (refactoring)
+- Fetching binaries may be different across other machines, need to look more into that and have others test it on their machines.
+- We also might need to include the "include" path from the cpp binaries. Not 100% sure, but I needed to do that for VSC to even have the cpp file to run without our IDE.
+- Send error messages to the UI rather than just terminal.
+- I think I need to add error handling for wrong parsing of compiler file path
+🔨 In-Progress
+Phase 3 Task Assignment: 
+C++ support
+✅ Done
+Can now compile and run a cpp file.
+🧊  Frozen 
+
+
+
+03/08/2025 & 03/10/2025 - Malcolm
+
+📔 To-Do
+- Commit/push current changes
+- Optimize code + testing
+🔨 In-Progress
+Phase 3 Task Assignment: 
+- C++ support
+✅ Done
+- Refactored in which now all the cpp and java specific functions are now in one, however, that has led to a slower runtime so I need to go back and fix the conditional logic.
+- After a bit of research, the cpp include path is not needed for our purposes; the only reason why it was needed for my VSC was b/c of their intellisense feature. (needs further testing)
+- Error messages are now also sent to the ui. (needs further testing)
+- Better error handling for the method: extractPath(String)
+- Fetching the bin path for java should be good unless the user has an older version of java then the system may not be able to fetch it. For c++, the way the bin path is fetched may not work for macOS/linux (current: 'g++ -v' alternate: 'g++ --print-search-dirs') and may need to use clang++ instead of g++. So, c++ needs to be tested in its current state with macOS/linux machines before any further action.
+🧊  Frozen
+
+
+03/16/2025 - Malcolm
+
+📔 To-Do
+Phase 3 Task Assignment:
+- Auto Install compiler
+🔨 In-Progress
+- Testing the run button
+- Researching solutions for automating compiler installation
+✅ Done
+Phase 3 Task Assignment: C++ support
+- Merged with input feature
+🧊  Frozen 
+
+
+
+04/17/2025 - Malcolm
+
+📔 To-Do
+Phase 3 Task Assignment:
+- Compiler installation button
+- Refactor
+🔨 In-Progress
+- Link a button to compiler download button
+- Refactor - match design to code (focus on Run&CompileCode packages first)
+✅ Done
+🧊  Frozen 
+
+
+04/21/2025 - Malcolm 
+
+📔 To-Do
+Phase 3 Task Assignment:
+- Compiler installation button
+- Refactor
+🔨 In-Progress
+- Link a button to compiler download button (just to instructions on a website)
+- Merge my refactored packages and put functionality into the UI once that is ready.
+✅ Done
+Refactoring of compile and run package
+🧊  Frozen 
+
+
+04/29/2025 & 04/30/2025 - Malcolm 
+
+📔 To-Do
+Phase 3 Task Assignment:
+Compiler installation button (might get to after prezy)
+🔨 In-Progress
+✅ Done
+Merging of functionality complete.
+🧊  Frozen 
+
+
+what I used for compiling (IN COMMAND PROMPT): 
+javac -encoding UTF8 -cp ".;./lib/gson-2.8.9.jar;./bin" -d bin ^
+    TextManagment/TextEditor.java ^
+    ui/src/com/codezide/ui/*.java ^
+    ui/src/com/codezide/ui/components/*.java ^
+    ui/src/com/codezide/ui/menubar/*.java ^
+    ui/src/com/codezide/ui/panels/*.java ^
+    ui/src/com/codezide/ui/utils/*.java ^
+    com/example/lsp/models/*.java ^
+    CodeParser/*.java
+
+what I used for running: 
+java -cp ".\bin;.\lib\gson-2.8.9.jar" com.codezide.ui.MainFrame
+////////////////////////////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////////////////////////////
+Owen's Commit List (didn't use Discord): 
+////////////////////////////////////////////////////////////////////
+
+Figuring out how to save a file onto a location in their mac.
+
+Add save feature to the gui created by stetson and alex
+////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////
+Stetson's Commit List: 
+////////////////////////////////////////////////////////////////////
+
+2/15/25-Stetson
+
+📔 To-Do (Tasks for this week this can include newly discovered bugs)
+
+🔨 In-Progress (Items you're focusing on)
+
+✅ Done (tasks you finished this week)
+File >  Edit > View taskbar on the top
+Two sidebars, one that can view all files in the directory and one to hold our run buttons
+
+🧊  Frozen (Tasks you cant get done/need help on) 
+
+3/3/25-Stetson
+
+📔 To-Do (Tasks for this week this can include newly discovered bugs)
+
+🔨 In-Progress (Items you're focusing on)
+
+✅ Done (tasks you finished this week)
+Update UI (Freshen up design to better reflect vision)
+
+🧊  Frozen (Tasks you cant get done/need help on) 
+
+4/9/25-Stetson
+
+📔 To-Do (Tasks for this week this can include newly discovered bugs)
+
+🔨 In-Progress (Items you're focusing on)
+
+✅ Done (tasks you finished this week)
+-Download Alex's UI File and integrate it
+
+🧊  Frozen (Tasks you cant get done/need help on) 
+
+4/22/25-Stetson
+
+📔 To-Do (Tasks for this week this can include newly discovered bugs)
+
+🔨 In-Progress (Items you're focusing on)
+
+✅ Done (tasks you finished this week)
+UI Refactoring
+Fix UI to reflect final product (Add minimize, and maximize functionality and X functionality)
+
+🧊  Frozen (Tasks you cant get done/need help on) 
+
+////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////
+Alex's Commit List: 
+////////////////////////////////////////////////////////////////////
+
+2/15/24-Alex
+
+📔 To-Do
+Windows commands for Java
+
+🔨 In Progress
+
+Research AST Tree and JavaParser vs using LSP or an OpenAPI
+
+✅ Done 
+
+Get started on researching how to tokenize variables
+JavaParser: For parsing Java code.
+ANTLR: For building parsers for custom languages.
+Language Server Protocol (LSP): For implementing language support in your IDE.
+Eclipse JDT or IntelliJ IDEA's OpenAPI: For leveraging existing Java IDE infrastructure.
+
+Text editing (Got a basic text box in but not sure if this approach is what we want) 
+Figure out if we can do custom text highlighting per word (Using JTextPane you can)
+See if height can be adjusted infinitely (It is an its automatic)
+🧊  Frozen 
+
+
+2/20/24-Alex
+
+📔 To-Do
+
+🔨 In Progress
+
+Research AST Tree and JavaParser vs using LSP or an OpenAPI
+JavaParser: For parsing Java code.
+ANTLR: For building parsers for custom languages.
+Language Server Protocol (LSP): For implementing language support in your IDE.
+Eclipse JDT or IntelliJ IDEA's OpenAPI: For leveraging existing Java IDE infrastructure.
+
+Merge the terminal into Stetsons UI branch and then push to main
+
+✅ Done 
+
+Get Malcolm's Output to have an Input text box and allow it to interact with programs
+
+🧊  Frozen 
+
+
+3/4/24-Alex
+
+📔 To-Do
+
+🔨 In Progress
+
+Merge the Input terminal into Stetsons UI branch and then push to main
+
+Research AST Tree and JavaParser vs using LSP or an OpenAPI
+JavaParser: For parsing Java code.
+Language Server Protocol (LSP): For implementing language support in your IDE.
+Eclipse JDT or IntelliJ IDEA's OpenAPI: For leveraging existing Java IDE infrastructure.
+
+✅ Done 
+
+
+🧊  Frozen 
+
+
+3/11/24-Alex
+
+📔 To-Do
+
+🔨 In Progress
+
+Research AST Tree and JavaParser vs using LSP or an OpenAPI
+JavaParser: For parsing Java code.
+Language Server Protocol (LSP): For implementing language support in your IDE.
+Eclipse JDT or IntelliJ IDEA's OpenAPI: For leveraging existing Java IDE infrastructure.
+
+✅ Done 
+
+Couldn't figure out why I cant fix the Run Button in my branch so I made a new branch from main and I'm moving the input features over :P
+
+Merge the Input terminal into Stetsons UI branch and then push to main
+
+🧊  Frozen 
+
+
+3/13/24-Alex
+
+📔 To-Do
+
+🔨 In Progress
+
+Attribution & Cleaning
+
+Fixing the main coding input
+
+Research AST Tree and JavaParser vs using LSP or an OpenAPI
+JavaParser: For parsing Java code.
+Language Server Protocol (LSP): For implementing language support in your IDE.
+Eclipse JDT or IntelliJ IDEA's OpenAPI: For leveraging existing Java IDE infrastructure.
+
+✅ Done 
+
+Couldn't figure out why I cant fix the Run Button in my branch so I made a new branch from main and I'm moving the input features over :P
+
+Merge the Input terminal into Stetsons UI branch and then push to main
+
+🧊  Frozen 
+
+
+3/16/24
+📔 To-Do
+
+🔨 In Progress
+
+Attribution & Cleaning
+
+Research AST Tree and JavaParser vs using LSP or an OpenAPI
+JavaParser: For parsing Java code.
+Language Server Protocol (LSP): For implementing language support in your IDE.
+Eclipse JDT or IntelliJ IDEA's OpenAPI: For leveraging existing Java IDE infrastructure.
+
+✅ Done 
+
+Couldn't figure out why I cant fix the Run Button in my branch so I made a new branch from main and I'm moving the input features over :P
+
+Implemented File Location actually linking to code file location
+
+Fixing the main coding input
+
+Merge the Input terminal into Stetsons UI branch and then push to main
+
+🧊  Frozen 
+
+
+THE GREAT REFACTOR IS UNDERWAY
+
+4/15/24
+📔 To-Do
+
+🔨 In Progress
+
+Research AST Tree and JavaParser vs using LSP or an OpenAPI
+JavaParser: For parsing Java code.
+Language Server Protocol (LSP): For implementing language support in your IDE.
+Eclipse JDT or IntelliJ IDEA's OpenAPI: For leveraging existing Java IDE infrastructure.
+
+✅ Done 
+
+Attribution & Cleaning
+
+
+🧊  Frozen 
+
+
+4/17/24
+📔 To-Do
+
+🔨 In Progress
+
+Integrate JDTLS Launcher into the CODEZ environment
+
+Implement Redraw Text() to interpret 
+
+✅ Done 
+
+Got JDTLS (Java Language Server) working and it finds errors in files
+
+Also managed to get the tokenization of the files done issue is now I've actually gotta write the interpreter for coloring them 
+
+🧊  Frozen 
+
+
+4/18/24
+📔 To-Do
+
+🔨 In Progress
+
+Implement Redraw Text() to interpret 
+
+✅ Done 
+
+Integrate JDTLS Launcher into the CODEZ environment
+
+Got the basic text recoloring implemented and the JDTLS server starts up alongside CODEZ instead of as a seperate test (I have an idea for how to implement it now I just need to put it together)
+
+🧊  Frozen 
+
+
+4/18/24
+📔 To-Do
+
+🔨 In Progress
+
+
+✅ Done 
+
+Fixed issue with JDTLS Blocking Thread (Both CODEZ and JDTLS run together now)
+
+Implement Redraw Text() to interpret colors
+
+🧊  Frozen
+
+
+4/25/24
+📔 To-Do
+
+Move into final UI design
+
+adjust colors for pretty printing
+
+Make JavaParser inherit from Parser again
+
+🔨 In Progress
+
+
+✅ Done 
+
+JDTLS server now runs, initializes, sends, and receives correctly
+
+TextParser now parses tokens, reads text content, and recolors text accoring to a token_type color switch 
+
+🧊  Frozen 
+
+
+4/26/24
+📔 To-Do
+
+
+🔨 In Progress
+
+
+✅ Done 
+
+
+Move into final UI design
+
+adjust colors for pretty printing
+
+Make JavaParser inherit from Parser again
+
+❌ Clean workflow (Make any file parsable instead of jerry rigging just one)
+
+🧊  Frozen 
+
+
+4/27/24
+📔 To-Do
+
+
+🔨 In Progress
+
+Make user specify project directory
+
+
+Get it to update dynamically instead of having to refresh it
+
+
+✅ Done 
+
+🧊  Frozen 
+
+
+
+4/28/24
+Project is basically done I just need to do two things but those are in regards to packaging the EXE
+
+
+
+5/7/24
+📔 To-Do
+
+
+🔨 In Progress
+
+
+✅ Done 
+
+Link project directory and auto populate file to run with file opened by file system 
+
+Make sure all the libraries are self contained in the package
+
+🧊  Frozen 
+
+
+javac -encoding UTF8 -cp ".;./lib/gson-2.8.9.jar;./bin" -d bin ^    TextManagment/TextEditor.java ^    ui/src/com/codezide/ui/*.java ^    ui/src/com/codezide/ui/components/*.java ^    ui/src/com/codezide/ui/menubar/*.java ^    ui/src/com/codezide/ui/panels/*.java ^    ui/src/com/codezide/ui/utils/*.java ^    AppLogicLayer/LspModels.java ^    AppLogicLayer/JavaParser.java
+
+java -cp ".\bin;.\lib\gson-2.8.9.jar" com.codezide.ui.MainFrame
+cd bin
+
+
+jar xf ..\lib\gson-2.8.9.jar
+
+
+cd ../
+
+
+jar cvfm CodezApp.jar manifest.txt -C bin .
+ 
+java -jar CodezApp.jar
+////////////////////////////////////////////////////////////////////
+
+
